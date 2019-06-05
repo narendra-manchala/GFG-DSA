@@ -1,0 +1,7 @@
+1. We solve a big problem assuming that solution is available for a smaller problem.
+    We must handle "base case" explicitly.
+2. Tail Recursion - recursive call is the last statement in the function
+    Tail call Elimination - compilers optimize by not remembering the code of all function
+        executions 
+    To implement "Tail Recursion" we may add extra argument to the function to remember the result of previous
+    execution
