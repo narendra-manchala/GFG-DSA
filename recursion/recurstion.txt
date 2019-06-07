@@ -5,3 +5,4 @@
         executions 
     To implement "Tail Recursion" we may add extra argument to the function to remember the result of previous
     execution
+        - Quick sort is faster than merge sort because of tail Recursion
