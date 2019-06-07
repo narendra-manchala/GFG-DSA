@@ -1,3 +1,11 @@
+"""
+    Q: Given a rope of length "n", cut it into max no of peices of length given in
+        list "l"
+    eg: n = 5, l = [1,2,3] => no.of peices = 5
+        n = 5, l - [2,3,4] => no.of peices = 2
+        n = 5, l = [2,4,6] => no.of peices = -1
+"""
+
 def max_peices(length, lengthSet):
     if length < 0:
         return -1
