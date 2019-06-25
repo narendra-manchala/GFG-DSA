@@ -15,12 +15,12 @@ char firstRepeatingCharacter(char* str){
     int count[256] = {};
     for (int i = 0; i < 256; i++)
         count[i] = -1;
-    int repIndx = -1;
+    int repIndx = __INT_MAX__;
     int len = strlen(str);
     for(int i = 0; i < len; i++){
         if(count[str[i]] == -1){
             count[str[i]] = i;
-        }else if(count[str[i]] <= repIndx || repIndx == -1) {
+        }else if(count[str[i]] <= repIndx) {
             repIndx = count[str[i]];
         }
     }
