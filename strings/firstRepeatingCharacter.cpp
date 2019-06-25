@@ -1,8 +1,9 @@
-#include <iostream>
-#include <string.h>
+#include <bits/stdc++.h>
+#include <string>
 // using namespace std;
 using std::cout;
 using std::endl;
+using std::string;
  /**
   * @brief  Given a string find the first repeating character i.e. first index
   *         appears first.
@@ -27,8 +28,27 @@ char firstRepeatingCharacter(char* str){
     return str[repIndx];
 }
 
+char firstRepeatingChar(string str){
+    int count[256];
+    for(int i = 0; i<256; i++){
+        count[i] = -1;
+    }
+    int strLen = str.length();
+    int firstRepeatedIndex = -1;
+    for(int i = strLen - 1; i>=0; i--){
+
+        if(count[str[i]] == -1){
+            count[str[i]] = i;
+        } else {
+            firstRepeatedIndex = i;
+        }
+    }
+    return str[firstRepeatedIndex];
+}
+
 int main(){
-    char str[] = "abcddb";
-    cout << "First char is: " << firstRepeatingCharacter(str);
+    char str[] = "geeksforgeeks";
+    cout << "First char is: " << firstRepeatingCharacter(str) 
+        << "; method2: " << firstRepeatingChar(str);
     return 0;
 }
